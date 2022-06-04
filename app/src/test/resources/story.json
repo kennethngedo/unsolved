@@ -1,0 +1,88 @@
+{
+  "story_id": 15,
+  "language_id": 1,
+  "genre_id": 4,
+  "main_character_id": 218,
+  "name": "My Last 3 Days",
+  "short_summary": "Some would die to be famous. Others are killed.",
+  "full_summary": "Josie King is murdered after a video of her singing goes viral. Relive the last 3 days of her life through her phone and discover who killed her – and why...",
+  "duration": "4 days",
+  "price": 0,
+  "age_from": 15,
+  "age_to": 99,
+  "intro_video_sequence": 334800,
+  "story_start_sequence": 1,
+  "story_end_sequence": 336600,
+  "passcode_clue": null,
+  "passcode_value": null,
+  "is_coming_soon": false,
+  "is_in_testing": false,
+  "is_early_access": false,
+  "is_published": true,
+  "is_featured": false,
+  "release_date": null,
+  "release_timezone": null,
+  "created": "2018-04-20 13:51:42",
+  "updated": "2018-10-09 02:59:06",
+  "publication_status": "published",
+  "list_image": [
+    {
+      "resource_id": 428,
+      "resource_fid": "9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4",
+      "resource_type": "image",
+      "resource_uri": "https://d1puk6yab42f06.cloudfront.net/9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4_60bd18b18278638ed90046239c8e2e9e.jpg",
+      "resource_preset": "image_square_1080",
+      "resource_processed": true,
+      "resource_progress": 100
+    }
+  ],
+  "background_image": [
+    {
+      "resource_id": 428,
+      "resource_fid": "9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4",
+      "resource_type": "image",
+      "resource_uri": "https://d1puk6yab42f06.cloudfront.net/9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4_60bd18b18278638ed90046239c8e2e9e.jpg",
+      "resource_preset": "image_square_1080",
+      "resource_processed": true,
+      "resource_progress": 100
+    }
+  ],
+  "preview_media": [
+    {
+      "resource_id": 428,
+      "resource_fid": "9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4",
+      "resource_type": "image",
+      "resource_uri": "https://d1puk6yab42f06.cloudfront.net/9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4_60bd18b18278638ed90046239c8e2e9e.jpg",
+      "resource_preset": "image_square_1080",
+      "resource_processed": true,
+      "resource_progress": 100
+    }
+  ],
+  "intro_video": [
+    {
+      "resource_id": 428,
+      "resource_fid": "9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4",
+      "resource_type": "image",
+      "resource_uri": "https://d1puk6yab42f06.cloudfront.net/9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4_60bd18b18278638ed90046239c8e2e9e.jpg",
+      "resource_preset": "image_square_1080",
+      "resource_processed": true,
+      "resource_progress": 100
+    }
+  ],
+  "characters": [
+    {
+      "character_id": 218,
+      "name": "Josie",
+      "is_main": true,
+      "image": {
+        "resource_id": 428,
+        "resource_fid": "9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4",
+        "resource_type": "image",
+        "resource_uri": "https://d1puk6yab42f06.cloudfront.net/9e980267ac53246a65cefda96d33491e379ee8fddd46e6262c4fee7ae9e826a4_60bd18b18278638ed90046239c8e2e9e.jpg",
+        "resource_preset": "image_square_1080",
+        "resource_processed": true,
+        "resource_progress": 100
+      }
+    }
+  ]
+}
