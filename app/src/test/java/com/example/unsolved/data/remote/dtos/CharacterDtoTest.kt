@@ -27,6 +27,6 @@ class CharacterDtoTest {
 
     @Test
     fun `toCharacterEntity() returns a CharacterEntity object`() {
-        assertNotEquals(tCharacterDto.toCharacterEntity(), null)
+        assertNotEquals(tCharacterDto.toCharacter(), null)
     }
 }

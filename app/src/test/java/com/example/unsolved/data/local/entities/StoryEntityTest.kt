@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class StoryDtoTest {
+class StoryEntityTest {
 
     private lateinit var tStoryDtoEntity: StoryEntity
 

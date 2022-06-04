@@ -1,6 +1,6 @@
 package com.example.unsolved.data.remote.dtos
 
-import com.example.unsolved.data.local.entities.CharacterEntity
+import  com.example.unsolved.domain.model.Character
 
 data class CharacterDto(
     val character_id: Int,
@@ -8,11 +8,11 @@ data class CharacterDto(
     val is_main: Boolean,
     val name: String
 ) {
-    fun toCharacterEntity(): CharacterEntity {
-        return CharacterEntity(
-            character_id = character_id,
-            image = image.toMediaEntity(),
-            is_main = is_main,
+    fun toCharacter(): Character {
+        return Character(
+            characterId = character_id,
+            image = image.toMedia(),
+            isMain = is_main,
             name = name
         )
     }

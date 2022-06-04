@@ -27,7 +27,7 @@ class MediaDtoTest {
 
     @Test
     fun `toMediaEntity() returns a MediaEntity object`() {
-        val media = tMediaDto.toMediaEntity()
+        val media = tMediaDto.toMedia()
         assertNotEquals(media, null)
     }
 }

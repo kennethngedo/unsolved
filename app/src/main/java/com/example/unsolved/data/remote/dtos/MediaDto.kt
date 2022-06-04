@@ -1,6 +1,6 @@
 package com.example.unsolved.data.remote.dtos
 
-import com.example.unsolved.data.local.entities.MediaEntity
+import com.example.unsolved.domain.model.Media
 
 data class MediaDto(
     val resource_fid: String,
@@ -11,15 +11,15 @@ data class MediaDto(
     val resource_type: String,
     val resource_uri: String
 ) {
-    fun toMediaEntity(): MediaEntity {
-        return MediaEntity(
-            resource_fid = resource_fid,
-            resource_id = resource_id,
-            resource_preset = resource_preset,
-            resource_processed = resource_processed,
-            resource_type = resource_type,
-            resource_progress = resource_progress,
-            resource_uri = resource_uri
+    fun toMedia(): Media {
+        return Media(
+            resourceFid = resource_fid,
+            resourceId = resource_id,
+            resourcePreset = resource_preset,
+            resourceProcessed = resource_processed,
+            resourceType = resource_type,
+            resourceProgress = resource_progress,
+            resourceUri = resource_uri
         )
     }
 }

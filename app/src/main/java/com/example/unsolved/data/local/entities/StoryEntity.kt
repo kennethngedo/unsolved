@@ -2,6 +2,8 @@ package com.example.unsolved.data.local.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.unsolved.domain.model.Character
+import com.example.unsolved.domain.model.Media
 import com.example.unsolved.domain.model.Story
 
 @Entity
@@ -33,25 +35,25 @@ data class StoryEntity(
     val story_id: Int,
     val story_start_sequence: Int,
     val updated: String,
-    val list_image: List<MediaEntity>,
-    val preview_media: List<MediaEntity>,
-    val intro_video: List<MediaEntity>,
-    val background_image: List<MediaEntity>,
-    val characters: List<CharacterEntity>,
+    val list_image: List<Media>,
+    val preview_media: List<Media>,
+    val intro_video: List<Media>,
+    val background_image: List<Media>,
+    val characters: List<Character>,
 ) {
     fun toStory(): Story {
         return Story(
             duration = duration,
             fullSummary = full_summary,
-            introVideo = intro_video.map { it.toMedia() },
+            introVideo = intro_video,
             mainCharacterId = main_character_id,
             name = name,
             price = price,
             shortSummary = short_summary,
             storyId = story_id,
-            listImage = list_image.map { it.toMedia() },
-            previewMedia = preview_media.map { it.toMedia() },
-            characters = characters.map { it.toCharacter() },
+            listImage = list_image,
+            previewMedia = preview_media,
+            characters = characters,
         )
     }
 }
