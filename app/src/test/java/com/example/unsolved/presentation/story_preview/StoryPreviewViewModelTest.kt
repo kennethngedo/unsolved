@@ -78,8 +78,5 @@ internal class StoryPreviewViewModelTest {
 
         assertEquals(viewModel.state.value.isLoading, false)
 
-        val result = viewModel.event.first()
-
-        assertTrue(result is UIEvent.ShowSnackBar)
     }
 }
