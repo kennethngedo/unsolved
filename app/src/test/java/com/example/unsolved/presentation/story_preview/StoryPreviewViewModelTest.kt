@@ -66,7 +66,7 @@ internal class StoryPreviewViewModelTest {
     }
 
     @Test
-    fun `Given that getStory returns a Failure result, when the value of state is accessed, then event should emit ShowSnackBar`() = runBlocking {
+    fun `Given that getStory returns a Failure result, when the value of state is accessed, then event should emit ShowSnackBar`()  {
         val tErrorMessage = "Some sleek error"
         coEvery { mockGetStory() } returns flow {
             emit(Resource.Failure(message = UIText.DynamicString(tErrorMessage), data = null))
