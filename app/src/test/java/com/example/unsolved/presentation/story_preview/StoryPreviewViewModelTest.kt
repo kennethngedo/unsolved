@@ -45,6 +45,8 @@ internal class StoryPreviewViewModelTest {
         viewModel = StoryPreviewViewModel(mockGetStory)
         viewModel.performGetStory()
 
+        delay(1000L)
+
         coVerify { mockGetStory() }
 
         assertEquals(viewModel.state.value.isLoading, false)
@@ -60,6 +62,8 @@ internal class StoryPreviewViewModelTest {
         viewModel = StoryPreviewViewModel(mockGetStory)
         viewModel.performGetStory()
 
+        delay(1000L)
+
         coVerify { mockGetStory() }
 
         assertEquals(viewModel.state.value.isLoading, true)
@@ -73,6 +77,8 @@ internal class StoryPreviewViewModelTest {
         }
         viewModel = StoryPreviewViewModel(mockGetStory)
         viewModel.performGetStory()
+
+        delay(1000L)
 
         coVerify { mockGetStory() }
 
