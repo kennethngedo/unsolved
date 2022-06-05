@@ -79,7 +79,7 @@ internal class StoryRepositoryImplTest {
         fun setUp() {
             coEvery { mockStoryApi.getStory() } returns ApiResponse(
                 status = ApiResponseStatus(
-                    code = 200,
+                    code = 0,
                     message = "hello"
                 ), result = tStoryDto
             )

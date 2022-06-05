@@ -47,6 +47,7 @@ internal class StoryPreviewViewModelTest {
             emit(Resource.Success(data = tStory))
         }
         viewModel = StoryPreviewViewModel(mockGetStory)
+        viewModel.performGetStory()
 
         coVerify { mockGetStory() }
 
@@ -61,6 +62,7 @@ internal class StoryPreviewViewModelTest {
             emit(Resource.Loading(data = null))
         }
         viewModel = StoryPreviewViewModel(mockGetStory)
+        viewModel.performGetStory()
 
         coVerify { mockGetStory() }
 
@@ -74,6 +76,7 @@ internal class StoryPreviewViewModelTest {
             emit(Resource.Failure(message = UIText.DynamicString(tErrorMessage), data = null))
         }
         viewModel = StoryPreviewViewModel(mockGetStory)
+        viewModel.performGetStory()
 
         coVerify { mockGetStory() }
 
