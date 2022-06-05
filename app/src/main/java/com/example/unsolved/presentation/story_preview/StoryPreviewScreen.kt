@@ -1,10 +1,9 @@
 package com.example.unsolved.presentation.story_preview
 
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -26,7 +25,6 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.unsolved.R
-import com.example.unsolved.common.theme.MidGrayBlack
 import com.example.unsolved.common.utils.Constants.TAG_CIRCLE_PROGRESS_INDICATOR
 import com.example.unsolved.common.utils.Constants.TAG_PLAY_BUTTON
 import com.example.unsolved.common.utils.Constants.TAG_PREVIEW_BUTTON

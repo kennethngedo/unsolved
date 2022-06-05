@@ -12,15 +12,11 @@ import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
-import io.mockk.verify
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeAll
-
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.extension.ExtendWith
@@ -31,9 +27,9 @@ internal class StoryPreviewViewModelTest {
     @MockK
     lateinit var mockGetStory: GetStory
 
-    lateinit var viewModel: StoryPreviewViewModel
+    private lateinit var viewModel: StoryPreviewViewModel
 
-    lateinit var tStory: Story
+    private lateinit var tStory: Story
 
     @BeforeAll
     fun setUp() {
