@@ -12,6 +12,7 @@ import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
@@ -38,14 +39,16 @@ internal class StoryPreviewViewModelTest {
     }
 
     @Test
-    fun `Given that getStory returns a Success result, when the value of state is accessed, then state should be have a story data`() {
+    fun `Given that getStory returns a Success result, when the value of state is accessed, then state should be have a story data`() = runBlocking {
         coEvery { mockGetStory() } returns flow {
             emit(Resource.Success(data = tStory))
         }
         viewModel = StoryPreviewViewModel(mockGetStory)
         viewModel.performGetStory()
 
-        //coVerify { mockGetStory() }
+        delay(1000L)
+
+        coVerify { mockGetStory() }
 
         assertEquals(viewModel.state.value.isLoading, false)
         assertNotNull(viewModel.state.value.story)
@@ -53,20 +56,22 @@ internal class StoryPreviewViewModelTest {
     }
 
     @Test
-    fun `Given that getStory returns a Loading result, when the value of state is accessed, then state is loading value should be true`() {
+    fun `Given that getStory returns a Loading result, when the value of state is accessed, then state is loading value should be true`() = runBlocking {
         coEvery { mockGetStory() } returns flow {
             emit(Resource.Loading(data = null))
         }
         viewModel = StoryPreviewViewModel(mockGetStory)
         viewModel.performGetStory()
 
-        //coVerify { mockGetStory() }
+        delay(1000L)
+
+        coVerify { mockGetStory() }
 
         assertEquals(viewModel.state.value.isLoading, true)
     }
 
     @Test
-    fun `Given that getStory returns a Failure result, when the value of state is accessed, then event should emit ShowSnackBar`()  {
+    fun `Given that getStory returns a Failure result, when the value of state is accessed, then event should emit ShowSnackBar`()  = runBlocking {
         val tErrorMessage = "Some sleek error"
         coEvery { mockGetStory() } returns flow {
             emit(Resource.Failure(message = UIText.DynamicString(tErrorMessage), data = null))
@@ -74,7 +79,9 @@ internal class StoryPreviewViewModelTest {
         viewModel = StoryPreviewViewModel(mockGetStory)
         viewModel.performGetStory()
 
-        //coVerify { mockGetStory() }
+        delay(1000L)
+
+        coVerify { mockGetStory() }
 
         assertEquals(viewModel.state.value.isLoading, false)
 
