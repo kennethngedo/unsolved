@@ -2,7 +2,6 @@ package com.example.unsolved.presentation.story_preview
 
 import com.example.unsolved.common.Fixtures
 import com.example.unsolved.common.utils.Resource
-import com.example.unsolved.common.utils.UIEvent
 import com.example.unsolved.common.utils.UIText
 import com.example.unsolved.data.remote.dtos.StoryDto
 import com.example.unsolved.domain.model.Story
@@ -13,10 +12,10 @@ import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
