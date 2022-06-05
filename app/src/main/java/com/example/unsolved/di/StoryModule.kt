@@ -3,14 +3,18 @@ package com.example.unsolved.di
 import android.app.Application
 import androidx.room.Room
 import com.example.unsolved.common.utils.Constants.BASE_URL
+import com.example.unsolved.common.utils.GsonParser
+import com.example.unsolved.common.utils.JsonParser
 import com.example.unsolved.common.utils.Logger
 import com.example.unsolved.common.utils.LoggerImpl
+import com.example.unsolved.data.local.Converters
 import com.example.unsolved.data.local.StoryDao
 import com.example.unsolved.data.local.StoryDatabase
 import com.example.unsolved.data.remote.StoryApi
-import com.example.unsolved.data.repository.StoryRepositoryImpl
+import com.example.unsolved.data.repositories.StoryRepositoryImpl
 import com.example.unsolved.domain.repositories.StoryRepository
 import com.example.unsolved.domain.usecases.GetStory
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,11 +47,21 @@ internal object StoryModule {
 
     @Provides
     @Singleton
-    fun provideStoryDatabase(app: Application): StoryDatabase {
+    fun provideStoryDatabase(app: Application, converters: Converters): StoryDatabase {
         return Room.databaseBuilder(
             app, StoryDatabase::class.java, "story_db"
-        ).build()
+        ).addTypeConverter(converters).build()
     }
+
+    @Provides
+    @Singleton
+    fun provideTypeConverter(jsonParser: JsonParser): Converters {
+        return Converters(jsonParser)
+    }
+
+    @Provides
+    @Singleton
+    fun provideJsonParser() : JsonParser = GsonParser(Gson())
 
     @Provides
     @Singleton

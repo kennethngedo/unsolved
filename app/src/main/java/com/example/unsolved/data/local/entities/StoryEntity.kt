@@ -54,6 +54,7 @@ data class StoryEntity(
             listImage = list_image,
             previewMedia = preview_media,
             characters = characters,
+            backgroundImage = background_image,
         )
     }
 }

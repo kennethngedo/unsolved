@@ -1,4 +1,4 @@
-package com.example.unsolved.data.repository
+package com.example.unsolved.data.repositories
 
 import com.example.unsolved.common.Fixtures
 import com.example.unsolved.common.utils.Resource
@@ -7,14 +7,10 @@ import com.example.unsolved.data.remote.StoryApi
 import com.example.unsolved.data.remote.dtos.ApiResponse
 import com.example.unsolved.data.remote.dtos.ApiResponseStatus
 import com.example.unsolved.data.remote.dtos.StoryDto
-import com.example.unsolved.domain.repositories.StoryRepository
 import com.google.gson.Gson
 import io.mockk.*
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.*

@@ -12,4 +12,5 @@ data class Story(
     val previewMedia: List<Media>,
     val introVideo: List<Media>,
     val characters: List<Character>,
+    val backgroundImage: List<Media>,
 )

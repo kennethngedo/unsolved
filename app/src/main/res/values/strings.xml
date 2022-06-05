@@ -3,4 +3,9 @@
     <string name="error_something_went_wrong">Oops! Something went wrong. It is not your fault, please try again.</string>
     <string name="error_no_internet">No internet, please check your internet and try again.</string>
     <string name="error_unknown">Unknow error</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="preview">Preview</string>
+    <string name="play">Play</string>
+    <string name="not_available">No cases to solve, please try again</string>
+    <string name="reload">Reload</string>
 </resources>

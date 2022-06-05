@@ -7,7 +7,7 @@ import com.example.unsolved.data.local.entities.StoryEntity
 @Dao
 interface StoryDao {
     @Query("SELECT * FROM storyentity WHERE id IS 1")
-    suspend fun getStory(): StoryEntity
+    suspend fun getStory(): StoryEntity?
 
     @Insert(onConflict = REPLACE)
     suspend fun insertAll(vararg users: StoryEntity)

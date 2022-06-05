@@ -24,10 +24,6 @@ class StoryPreviewViewModel @Inject constructor(private val getStory: GetStory) 
     private val _event = MutableSharedFlow<UIEvent>()
     val event = _event.asSharedFlow()
 
-    init {
-        performGetStory()
-    }
-
     fun performGetStory() {
         viewModelScope.launch(Dispatchers.IO) {
             getStory().collect {

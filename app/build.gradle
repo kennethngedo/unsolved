@@ -29,7 +29,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.unsolved.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary true
         }
@@ -103,6 +103,9 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.41"
     kapt "com.google.dagger:hilt-android-compiler:2.38.1"
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    // Hilt - Android Test
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
 
     // Room Database
     implementation "androidx.room:room-runtime:$room_version"
@@ -112,6 +115,12 @@ dependencies {
     // Compose Destinations
     implementation 'io.github.raamcosta.compose-destinations:core:1.5.8-beta'
     ksp 'io.github.raamcosta.compose-destinations:ksp:1.5.8-beta'
+
+    // Imaging 
+    implementation "com.github.skydoves:landscapist-glide:1.5.2"
+
+    // Video Player
+    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
 
 }
 

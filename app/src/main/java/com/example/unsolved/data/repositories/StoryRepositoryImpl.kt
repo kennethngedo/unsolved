@@ -1,4 +1,4 @@
-package com.example.unsolved.data.repository
+package com.example.unsolved.data.repositories
 
 import com.example.unsolved.R
 import com.example.unsolved.common.utils.Logger
@@ -24,12 +24,14 @@ class StoryRepositoryImpl @Inject constructor(
     private val tag = "StoryRepository"
 
     override suspend fun getStory(): Flow<Resource<Story>> = flow {
-        var story = storyDao.getStory().toStory()
+        emit(Resource.Loading())
+
+        var story = storyDao.getStory()?.toStory()
         emit(Resource.Loading(data = story))
 
         try {
             val storyResponse = storyApi.getStory()
-            if (storyResponse.status.code != 200) {
+            if (storyResponse.status.code != 0) {
                 throw ApiException(msg = storyResponse.status.message)
             }
 
@@ -37,7 +39,7 @@ class StoryRepositoryImpl @Inject constructor(
             storyDao.deleteAll()
             storyDao.insertAll(remoteStory)
 
-            story = storyDao.getStory().toStory()
+            story = storyDao.getStory()?.toStory()
             emit(Resource.Success(data = story))
 
         } catch (ex: HttpException) {
