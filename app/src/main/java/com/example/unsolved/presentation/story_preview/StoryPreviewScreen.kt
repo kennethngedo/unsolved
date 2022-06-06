@@ -28,6 +28,7 @@ import com.example.unsolved.R
 import com.example.unsolved.common.utils.Constants.TAG_CIRCLE_PROGRESS_INDICATOR
 import com.example.unsolved.common.utils.Constants.TAG_PLAY_BUTTON
 import com.example.unsolved.common.utils.Constants.TAG_PREVIEW_BUTTON
+import com.example.unsolved.common.utils.Constants.TAG_REFRESH_BUTTON
 import com.example.unsolved.common.utils.Constants.TAG_SUMMARY_TEXT
 import com.example.unsolved.common.utils.UIEvent
 import com.ramcosta.composedestinations.annotation.Destination
@@ -192,7 +193,7 @@ fun StoryPreviewScreen(
                     verticalArrangement = Arrangement.Center
                 ) {
                     Text(text = stringResource(id = R.string.not_available))
-                    Button(onClick = { viewModel.performGetStory() }) {
+                    Button(onClick = { viewModel.performGetStory() }, modifier = Modifier.testTag(TAG_REFRESH_BUTTON)) {
                         Icon(Icons.Filled.Refresh, contentDescription = "refresh")
 
                         Text(text = stringResource(id = R.string.reload))

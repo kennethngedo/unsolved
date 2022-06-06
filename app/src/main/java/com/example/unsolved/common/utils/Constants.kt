@@ -7,4 +7,5 @@ object Constants {
     const val TAG_PREVIEW_BUTTON = "TAG_PREVIEW_BUTTON"
     const val TAG_PLAY_BUTTON = "TAG_PLAY_BUTTON"
     const val TAG_SUMMARY_TEXT = "TAG_SUMMARY_TEXT"
+    const val TAG_REFRESH_BUTTON = "TAG_REFRESH_BUTTON"
 }
