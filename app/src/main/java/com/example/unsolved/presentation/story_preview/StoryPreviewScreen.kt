@@ -186,7 +186,7 @@ fun StoryPreviewScreen(
 
             }
 
-            if (state.story == null) {
+            if (state.story == null && !isLoading) {
                 Column(
                     modifier = Modifier.fillMaxSize(),
                     horizontalAlignment = Alignment.CenterHorizontally,
